@@ -1,0 +1,16 @@
+title: hello-world1
+description: '123123'
+template:
+  repo: hello-world1-template
+  name: hello-world1
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
